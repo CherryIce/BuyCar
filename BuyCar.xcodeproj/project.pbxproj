@@ -15,6 +15,19 @@
 		237E38631E95D647001F0133 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 237E38611E95D647001F0133 /* LaunchScreen.storyboard */; };
 		237E386E1E95D647001F0133 /* BuyCarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 237E386D1E95D647001F0133 /* BuyCarTests.m */; };
 		237E38791E95D647001F0133 /* BuyCarUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 237E38781E95D647001F0133 /* BuyCarUITests.m */; };
+		237E38891E95D818001F0133 /* BuyCarViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 237E38871E95D818001F0133 /* BuyCarViewCell.m */; };
+		237E388A1E95D818001F0133 /* BuyCarViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 237E38881E95D818001F0133 /* BuyCarViewCell.xib */; };
+		237E388E1E95E038001F0133 /* GoodsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 237E388D1E95E038001F0133 /* GoodsModel.m */; };
+		237E38911E95E0CA001F0133 /* BusinessModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 237E38901E95E0CA001F0133 /* BusinessModel.m */; };
+		237E38941E95E74A001F0133 /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 237E38931E95E74A001F0133 /* ViewModel.m */; };
+		237E38981E960E47001F0133 /* SectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 237E38971E960E47001F0133 /* SectionHeaderView.m */; };
+		237E389D1E96259B001F0133 /* BuyCarToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 237E389C1E96259B001F0133 /* BuyCarToolBar.m */; };
+		237E38A01E963CBB001F0133 /* IndicatoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 237E389F1E963CBB001F0133 /* IndicatoryView.m */; };
+		23B742F61E97329D00416F0B /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B742F51E97329D00416F0B /* UIColor+Hex.m */; };
+		23B742FA1E973C3F00416F0B /* BuyCarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B742F91E973C3F00416F0B /* BuyCarCell.m */; };
+		23B742FD1E97430600416F0B /* EditCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B742FC1E97430600416F0B /* EditCellView.m */; };
+		23B743001E97643600416F0B /* BuyCarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B742FF1E97643600416F0B /* BuyCarController.m */; };
+		23B743031E976BF800416F0B /* EditStateNormal.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B743021E976BF800416F0B /* EditStateNormal.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +64,31 @@
 		237E38741E95D647001F0133 /* BuyCarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BuyCarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		237E38781E95D647001F0133 /* BuyCarUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BuyCarUITests.m; sourceTree = "<group>"; };
 		237E387A1E95D647001F0133 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		237E38861E95D818001F0133 /* BuyCarViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyCarViewCell.h; sourceTree = "<group>"; };
+		237E38871E95D818001F0133 /* BuyCarViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyCarViewCell.m; sourceTree = "<group>"; };
+		237E38881E95D818001F0133 /* BuyCarViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BuyCarViewCell.xib; sourceTree = "<group>"; };
+		237E388C1E95E038001F0133 /* GoodsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsModel.h; sourceTree = "<group>"; };
+		237E388D1E95E038001F0133 /* GoodsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsModel.m; sourceTree = "<group>"; };
+		237E388F1E95E0CA001F0133 /* BusinessModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessModel.h; sourceTree = "<group>"; };
+		237E38901E95E0CA001F0133 /* BusinessModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessModel.m; sourceTree = "<group>"; };
+		237E38921E95E74A001F0133 /* ViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewModel.h; sourceTree = "<group>"; };
+		237E38931E95E74A001F0133 /* ViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewModel.m; sourceTree = "<group>"; };
+		237E38961E960E47001F0133 /* SectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionHeaderView.h; sourceTree = "<group>"; };
+		237E38971E960E47001F0133 /* SectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionHeaderView.m; sourceTree = "<group>"; };
+		237E389B1E96259B001F0133 /* BuyCarToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyCarToolBar.h; sourceTree = "<group>"; };
+		237E389C1E96259B001F0133 /* BuyCarToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyCarToolBar.m; sourceTree = "<group>"; };
+		237E389E1E963CBB001F0133 /* IndicatoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndicatoryView.h; sourceTree = "<group>"; };
+		237E389F1E963CBB001F0133 /* IndicatoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndicatoryView.m; sourceTree = "<group>"; };
+		23B742F41E97329800416F0B /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		23B742F51E97329D00416F0B /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		23B742F81E973C3F00416F0B /* BuyCarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyCarCell.h; sourceTree = "<group>"; };
+		23B742F91E973C3F00416F0B /* BuyCarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyCarCell.m; sourceTree = "<group>"; };
+		23B742FB1E97430600416F0B /* EditCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditCellView.h; sourceTree = "<group>"; };
+		23B742FC1E97430600416F0B /* EditCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditCellView.m; sourceTree = "<group>"; };
+		23B742FE1E97643600416F0B /* BuyCarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyCarController.h; sourceTree = "<group>"; };
+		23B742FF1E97643600416F0B /* BuyCarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyCarController.m; sourceTree = "<group>"; };
+		23B743011E976BF800416F0B /* EditStateNormal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditStateNormal.h; sourceTree = "<group>"; };
+		23B743021E976BF800416F0B /* EditStateNormal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditStateNormal.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +139,15 @@
 		237E38521E95D647001F0133 /* BuyCar */ = {
 			isa = PBXGroup;
 			children = (
+				23B742F31E97324300416F0B /* Category */,
+				237E38951E960E0A001F0133 /* View */,
+				237E388B1E95E020001F0133 /* Model */,
 				237E38561E95D647001F0133 /* AppDelegate.h */,
 				237E38571E95D647001F0133 /* AppDelegate.m */,
 				237E38591E95D647001F0133 /* ViewController.h */,
 				237E385A1E95D647001F0133 /* ViewController.m */,
+				23B742FE1E97643600416F0B /* BuyCarController.h */,
+				23B742FF1E97643600416F0B /* BuyCarController.m */,
 				237E385C1E95D647001F0133 /* Main.storyboard */,
 				237E385F1E95D647001F0133 /* Assets.xcassets */,
 				237E38611E95D647001F0133 /* LaunchScreen.storyboard */,
@@ -138,6 +181,50 @@
 				237E387A1E95D647001F0133 /* Info.plist */,
 			);
 			path = BuyCarUITests;
+			sourceTree = "<group>";
+		};
+		237E388B1E95E020001F0133 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				237E388C1E95E038001F0133 /* GoodsModel.h */,
+				237E388D1E95E038001F0133 /* GoodsModel.m */,
+				237E388F1E95E0CA001F0133 /* BusinessModel.h */,
+				237E38901E95E0CA001F0133 /* BusinessModel.m */,
+				237E38921E95E74A001F0133 /* ViewModel.h */,
+				237E38931E95E74A001F0133 /* ViewModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		237E38951E960E0A001F0133 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				237E38861E95D818001F0133 /* BuyCarViewCell.h */,
+				237E38871E95D818001F0133 /* BuyCarViewCell.m */,
+				237E38881E95D818001F0133 /* BuyCarViewCell.xib */,
+				237E38961E960E47001F0133 /* SectionHeaderView.h */,
+				237E38971E960E47001F0133 /* SectionHeaderView.m */,
+				237E389B1E96259B001F0133 /* BuyCarToolBar.h */,
+				237E389C1E96259B001F0133 /* BuyCarToolBar.m */,
+				237E389E1E963CBB001F0133 /* IndicatoryView.h */,
+				237E389F1E963CBB001F0133 /* IndicatoryView.m */,
+				23B742F81E973C3F00416F0B /* BuyCarCell.h */,
+				23B742F91E973C3F00416F0B /* BuyCarCell.m */,
+				23B742FB1E97430600416F0B /* EditCellView.h */,
+				23B742FC1E97430600416F0B /* EditCellView.m */,
+				23B743011E976BF800416F0B /* EditStateNormal.h */,
+				23B743021E976BF800416F0B /* EditStateNormal.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		23B742F31E97324300416F0B /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				23B742F41E97329800416F0B /* UIColor+Hex.h */,
+				23B742F51E97329D00416F0B /* UIColor+Hex.m */,
+			);
+			name = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +336,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				237E388A1E95D818001F0133 /* BuyCarViewCell.xib in Resources */,
 				237E38631E95D647001F0133 /* LaunchScreen.storyboard in Resources */,
 				237E38601E95D647001F0133 /* Assets.xcassets in Resources */,
 				237E385E1E95D647001F0133 /* Main.storyboard in Resources */,
@@ -276,9 +364,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				237E38891E95D818001F0133 /* BuyCarViewCell.m in Sources */,
 				237E385B1E95D647001F0133 /* ViewController.m in Sources */,
+				23B742FD1E97430600416F0B /* EditCellView.m in Sources */,
 				237E38581E95D647001F0133 /* AppDelegate.m in Sources */,
+				237E38911E95E0CA001F0133 /* BusinessModel.m in Sources */,
+				23B743001E97643600416F0B /* BuyCarController.m in Sources */,
+				237E38A01E963CBB001F0133 /* IndicatoryView.m in Sources */,
+				23B742FA1E973C3F00416F0B /* BuyCarCell.m in Sources */,
 				237E38551E95D647001F0133 /* main.m in Sources */,
+				237E389D1E96259B001F0133 /* BuyCarToolBar.m in Sources */,
+				237E388E1E95E038001F0133 /* GoodsModel.m in Sources */,
+				23B742F61E97329D00416F0B /* UIColor+Hex.m in Sources */,
+				23B743031E976BF800416F0B /* EditStateNormal.m in Sources */,
+				237E38941E95E74A001F0133 /* ViewModel.m in Sources */,
+				237E38981E960E47001F0133 /* SectionHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +616,7 @@
 				237E387F1E95D647001F0133 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		237E38801E95D647001F0133 /* Build configuration list for PBXNativeTarget "BuyCarTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +625,7 @@
 				237E38821E95D647001F0133 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		237E38831E95D647001F0133 /* Build configuration list for PBXNativeTarget "BuyCarUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +634,7 @@
 				237E38851E95D647001F0133 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,15 +1,14 @@
 //
-//  ViewController.m
+//  BuyCarController.m
 //  BuyCar
 //
-//  Created by xfej on 17/4/6.
+//  Created by xfej on 17/4/7.
 //  Copyright © 2017年 消费e家. All rights reserved.
 //
 
-#import "ViewController.h"
 #import "BuyCarController.h"
 
-#import "BuyCarViewCell.h"
+#import "BuyCarCell.h"
 
 #import "SectionHeaderView.h"
 
@@ -24,11 +23,14 @@
 //设备的宽度
 #define KScreenWidth  [UIScreen mainScreen].bounds.size.width
 
-@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface BuyCarController ()<UITableViewDelegate,UITableViewDataSource>
 {
     BuyCarToolBar * buyCarToolBar;
     CGFloat allPrice;
     IndicatoryView * loading;
+    
+    BOOL editbool;
+    SectionHeaderView * sectionHeader;
 }
 
 @property (nonatomic,strong) UITableView * buyCarTableView;
@@ -43,7 +45,7 @@
 
 @end
 
-@implementation ViewController
+@implementation BuyCarController
 
 - (UITableView *)buyCarTableView
 {
@@ -53,7 +55,7 @@
         _buyCarTableView.backgroundColor = [UIColor whiteColor];
         _buyCarTableView.delegate = self;
         _buyCarTableView.dataSource = self;
-        [_buyCarTableView registerNib:[UINib nibWithNibName:@"BuyCarViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
+        [_buyCarTableView registerClass:[BuyCarCell class] forCellReuseIdentifier:@"Cell"];
         [_buyCarTableView registerClass:[SectionHeaderView class] forHeaderFooterViewReuseIdentifier:@"SectionHeader"];
         _buyCarTableView.showsVerticalScrollIndicator = NO;
         _buyCarTableView.tableFooterView = [[UIView alloc] init];
@@ -87,9 +89,7 @@
 {
     [super viewDidLoad];
     
-    self.title = @"购物车";
-    
-    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.title = @"贼不爽";
     
     [self setIndicatorView];
     
@@ -105,6 +105,46 @@
     }];
     
     
+}
+
+#pragma mark 点击section编辑按钮
+- (void) editClick:(UIButton *) sender
+{
+    if (editbool)
+    {
+        [self editBtn:editbool section:sender.tag - 1000];
+        editbool = NO;
+    }
+    else
+    {
+        [self editBtn:editbool section:sender.tag - 1000];
+        editbool = YES;
+    }
+    [sectionHeader.editSectionCellButton setTitle:editbool?@"完成":@"编辑" forState:UIControlStateNormal];
+}
+
+- (void) editBtn:(BOOL) isbool section:(NSInteger)section
+{
+    
+    BusinessModel * model = self.dataSource[section];
+        
+    if (!isbool)
+    {
+        for (GoodsModel * goods in model.BuyCarArray)
+        {
+            goods.cellEditState = 1;
+        }
+    }
+    else
+    {
+        for (GoodsModel * goods in model.BuyCarArray)
+        {
+                goods.cellEditState = 0;
+        }
+    }
+    //单独刷新某个section
+    NSIndexSet * indexSet = [[NSIndexSet alloc] initWithIndex:section];
+    [self.buyCarTableView reloadSections:indexSet withRowAnimation:UITableViewRowAnimationNone];
 }
 
 - (void) setIndicatorView
@@ -160,14 +200,14 @@
     BusinessModel * store = self.dataSource[indexPath.section];
     GoodsModel * good  = store.BuyCarArray[indexPath.row];
     
-    BuyCarViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    BuyCarCell * cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     
     if (!cell) {
-        cell = [[BuyCarViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        cell = [[BuyCarCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];//点击cell颜色不变
     
-    cell.cellButtonCallBack = ^ (NSInteger tag) {
+    cell.carCellButtonCallBack = ^ (NSInteger tag) {
         switch (tag) {
             case 99://-方法
             {
@@ -251,7 +291,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.navigationController pushViewController:[[BuyCarController alloc] init] animated:YES];
+    [self showAlertViewWithMessage:@"别闹～"];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -271,15 +311,16 @@
 
 - (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    SectionHeaderView * sectionHeader = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"SectionHeader"];
+   sectionHeader = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"SectionHeader"];
     if (!sectionHeader)
-         sectionHeader = [[SectionHeaderView alloc] initWithReuseIdentifier:@"header"];
+        sectionHeader = [[SectionHeaderView alloc] initWithReuseIdentifier:@"header"];
     
     BusinessModel * model = self.dataSource[section];
     
     sectionHeader.model = model;
     
     sectionHeader.selectSectionButton.tag = section + 100;
+    sectionHeader.editSectionCellButton.tag = section + 1000;
     NSNumber *num = self.sectionSelect[section];
     //1为选中 0为未选中
     if ([num isEqualToNumber:@1])
@@ -288,6 +329,8 @@
         sectionHeader.selectSectionButton.selected = NO;
     
     [sectionHeader.selectSectionButton addTarget:self action:@selector(headerButtonOnClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [sectionHeader.editSectionCellButton addTarget:self action:@selector(editClick:) forControlEvents:UIControlEventTouchUpInside];
     
     return sectionHeader;
 }
@@ -481,7 +524,7 @@
             [loading removeFromSuperview];
             [self loactionDeleteWithArr:arr];//请求成功后进行本地删除
         });
-    
+        
     }
 }
 
